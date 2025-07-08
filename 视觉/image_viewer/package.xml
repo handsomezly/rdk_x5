@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<package format="3">
+  <name>image_viewer</name>
+  <version>0.0.1</version>
+  <description>A ROS 2 package to view images from a camera node using OpenCV.</description>
+  
+  <maintainer email="your.email@example.com">Your Name</maintainer>
+  
+  <license>Apache License 2.0</license>
+
+  <buildtool_depend>ament_cmake</buildtool_depend>
+
+  <depend>rclcpp</depend>
+  <depend>sensor_msgs</depend>
+  <depend>cv_bridge</depend>
+  <depend>image_transport</depend>
+  <depend>OpenCV</depend>
+
+  <export>
+    <build_type>ament_cmake</build_type>
+  </export>
+</package>

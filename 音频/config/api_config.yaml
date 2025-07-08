@@ -1,0 +1,63 @@
+# 音频RDK API配置文件
+# 请将以下配置信息替换为你的实际API密钥和配置
+
+# 智谱AI配置 (AI对话功能)
+zhipu_ai:
+  api_key: "your_zhipu_api_key_here"
+  model: "glm-4-plus"
+  temperature: 0.8
+  max_tokens: 1000
+  timeout: 30
+  
+# 阿里云DashScope配置 (TTS语音合成)
+dashscope:
+  api_key: "your_dashscope_api_key_here"
+  voice_type: "longxiaochun"  # 可选: longxiaochun, longjinghao, longkeyue等
+  audio_format: "wav"
+  sample_rate: 16000
+  
+# 百度AI配置 (图像理解)
+baidu_ai:
+  api_key: "your_baidu_api_key_here"
+  secret_key: "your_baidu_secret_key_here"
+  timeout: 30
+  
+# 邮件报警配置 (跌倒检测)
+email_config:
+  enabled: true
+  smtp_server: "smtp.163.com"
+  smtp_port: 587
+  sender_email: "your_email@163.com"
+  sender_password: "your_app_password"  # 应用密码，不是登录密码
+  receiver_email: "alert@163.com"
+  
+# 设备配置
+device_config:
+  # 音频设备
+  audio_device: "hw:0,0"  # 或者 "default"
+  
+  # 串口设备
+  serial_port: "/dev/ttyUSB0"
+  serial_baudrate: 9600
+  
+  # IMU设备
+  imu_device: "/dev/ttyACM0"
+  imu_baudrate: 115200
+  
+  # 激光雷达设备
+  lidar_device: "/dev/ttyACM1"
+  lidar_baudrate: 230400
+  
+# 系统配置
+system_config:
+  # ROS2域ID
+  ros_domain_id: 42
+  
+  # 日志级别
+  log_level: "INFO"  # DEBUG, INFO, WARN, ERROR
+  
+  # 节点重启设置
+  respawn_delay: 2  # 秒
+  
+  # 超时设置
+  node_timeout: 10  # 秒 
